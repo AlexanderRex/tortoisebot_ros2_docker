@@ -40,9 +40,9 @@ RUN apt update \
     pytest-rerunfailures \
     setuptools
 
-# Install ROS 2 Galactic
+# Install ROS 2 Galactic and Gazebo ROS integration
 RUN apt update \
-    && apt install -y ros-galactic-desktop \
+    && apt install -y ros-galactic-desktop ros-galactic-gazebo-ros-pkgs \
     && echo "source /opt/ros/galactic/setup.bash" >> /root/.bashrc
 
 # Create the workspace and clone the project repository
